@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Simulador de Catering</title>
+</head>
+
+<body>
+	<h1>Simulador de Catering</h1>
+	<h3 id="resultado"></h3>
+
+	<form id="simulador">
+		<div class="input-container">
+			<label for="comensales">Cantidad de comensales:</label>
+			<input type="number" id="inputComensales" name="comensales" min="1" max="20" required>
+			<output class="outputClase" id="outputComensales"></output>
+		</div>
+
+		<div class="input-container">
+			<label for="menu">Tipo de menú:</label>
+			<select id="selectMenu" name="menu" required>
+				<option value="degustacion">Degustación</option>
+				<option value="completo">Completo</option>
+				<option value="mixto">Mixto</option>
+			</select>
+		</div>
+
+		<div class="input-container">
+			<label for="temporada">Temporada:</label>
+			<select id="selectTemporada" name="temporada" required>
+				<option value="primera">Primera</option>
+				<option value="segunda">Segunda</option>
+				<option value="tercera">Tercera</option>
+			</select>
+		</div>
+
+		<div class="input-container">
+			<label for="mediopago">Medio de pago:</label>
+			<select id="selectMediopago" name="mediopago" required>
+				<option value="tarjeta">Tarjeta (Crédito/Débito recargo 8%)</option>
+				<option value="transferencia">Transferencia (Sin recargo)</option>
+				<option value="efectivo">Efectivo (Descuento 5%)</option>
+			</select>
+		</div>
+
+		<button type="submit">Calcular costo del catering</button>
+		<button type="button" id="borrarResultado">Borrar presupuesto</button>
+		<button id="verCatering">Ver catering anterior</button>
+
+	</form>
+	<div class="imagenCentro">
+		<img src="./images/calculo.png" alt="Tabla calculo">
+	</div>
+	<script src="./js/script.js"></script>
+</body>
+
+
+</html>
